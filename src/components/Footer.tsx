@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-sm text-gray-300">seemarehman942@gmail.com</span>
+                <span className="text-sm text-gray-300">Info@allroundpunkt.com</span>
               </div>
             </div>
           </div>
@@ -78,6 +78,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Customer Service</h3>
             <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact Us

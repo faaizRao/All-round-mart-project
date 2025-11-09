@@ -23,7 +23,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                <p className="text-gray-600">seemarehman942@gmail.com</p>
+                <p className="text-gray-600">Info@allroundpunkt.com</p>
                 <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
               </div>
             </div>
@@ -194,7 +194,7 @@ const ContactPage = () => {
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="font-semibold text-gray-900 mb-2">Do you ship internationally?</h3>
             <p className="text-gray-600 text-sm">
-              Currently, we only ship within Germany. We're working on expanding to other European countries soon.
+              Currently, we only ship within Germany. We&apos;re working on expanding to other European countries soon.
             </p>
           </div>
         </div>

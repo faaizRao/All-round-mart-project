@@ -12,7 +12,7 @@ A complete, production-ready Next.js 14 eCommerce website for **All Round Mart**
 - **Company**: All Round Mart
 - **Owner**: Seema Rehman
 - **Location**: Grüngürtelstr. 118, 50996, Köln, Germany
-- **Email**: seemarehman942@gmail.com
+- **Email**: Info@allroundpunkt.com
 - **Phone**: +49 706736259
 
 ## ✨ Features
@@ -78,8 +78,8 @@ A complete, production-ready Next.js 14 eCommerce website for **All Round Mart**
    STRIPE_SECRET_KEY=sk_test_your_key_here
 
    # Email Configuration
-   EMAIL_USER=seemarehman942@gmail.com
-   EMAIL_PASS=your_gmail_app_password
+   EMAIL_USER=Info@allroundpunkt.com
+   EMAIL_PASS=your_email_app_password
    ```
 
 4. **Run development server**
@@ -209,7 +209,7 @@ Automatic dark mode support with:
 
 ## 📞 Support & Contact
 
-- **Email**: seemarehman942@gmail.com
+- **Email**: Info@allroundpunkt.com
 - **Phone**: +49 706736259
 - **Address**: Grüngürtelstr. 118, 50996, Köln, Germany
 - **Business Hours**: Monday - Friday, 9:00 AM - 6:00 PM

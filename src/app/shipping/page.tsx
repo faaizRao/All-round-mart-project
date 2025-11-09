@@ -54,7 +54,7 @@ export default function ShippingPage() {
           Questions about shipping or need to track your order? Contact us!
         </p>
         <div className="space-y-2 text-gray-700">
-          <p><strong>Email:</strong> seemarehman942@gmail.com</p>
+          <p><strong>Email:</strong> Info@allroundpunkt.com</p>
           <p><strong>Phone:</strong> +49 706736259</p>
           <p><strong>Address:</strong> Grüngürtelstr. 118, 50996, Köln, Germany</p>
           <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>

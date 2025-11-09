@@ -51,10 +51,10 @@ export default function ReturnsPage() {
       <div className="bg-blue-50 rounded-lg p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
         <p className="text-gray-700 mb-4">
-          Have questions about returns or need help with your order? We're here to help!
+          Have questions about returns or need help with your order? We&apos;re here to help!
         </p>
         <div className="space-y-2 text-gray-700">
-          <p><strong>Email:</strong> seemarehman942@gmail.com</p>
+          <p><strong>Email:</strong> Info@allroundpunkt.com</p>
           <p><strong>Phone:</strong> +49 706736259</p>
           <p><strong>Address:</strong> Grüngürtelstr. 118, 50996, Köln, Germany</p>
           <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>

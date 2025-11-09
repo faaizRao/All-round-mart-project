@@ -6,6 +6,26 @@ import nodemailer from 'nodemailer';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
+interface OrderItem {
+  product: {
+    name: string;
+    price: number;
+  };
+  quantity: number;
+}
+
+interface Customer {
+  name: string;
+  email: string;
+  phone: string;
+  address: {
+    street: string;
+    city: string;
+    postalCode: string;
+    country: string;
+  };
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Check for required environment variables
@@ -39,7 +59,7 @@ export async function POST(request: NextRequest) {
       metadata: {
         customer_name: customer.name,
         customer_email: customer.email,
-        order_items: JSON.stringify(items.map((item: any) => ({
+        order_items: JSON.stringify(items.map((item: OrderItem) => ({
           name: item.product.name,
           quantity: item.quantity,
           price: item.product.price
@@ -61,7 +81,7 @@ export async function POST(request: NextRequest) {
     
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'seemarehman942@gmail.com',
+      to: 'Info@allroundpunkt.com',
       subject: `New Order from ${customer.name} - All Round Mart`,
       html: emailHtml,
     });
@@ -78,7 +98,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-function generateOrderEmailHtml(items: any[], customer: any, total: number) {
+function generateOrderEmailHtml(items: OrderItem[], customer: Customer, total: number) {
   const itemsHtml = items.map(item => `
     <tr>
       <td style="padding: 10px; border-bottom: 1px solid #eee;">

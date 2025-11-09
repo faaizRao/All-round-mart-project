@@ -26,7 +26,7 @@ const SuccessPage = () => {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Order Confirmation</h3>
               <p className="text-gray-600 text-sm">
-                We've sent an order confirmation to seemarehman942@gmail.com with all the details.
+                We've sent an order confirmation to Info@allroundpunkt.com with all the details.
               </p>
             </div>
             
@@ -70,10 +70,10 @@ const SuccessPage = () => {
         <div className="mt-12 p-6 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-900 mb-2">Need Help?</h3>
           <p className="text-gray-600 mb-4">
-            If you have any questions about your order, please don't hesitate to contact us.
+            If you have any questions about your order, please don&apos;t hesitate to contact us.
           </p>
           <div className="text-sm text-gray-600">
-            <p>📧 Email: seemarehman942@gmail.com</p>
+            <p>📧 Email: Info@allroundpunkt.com</p>
             <p>📞 Phone: +49 706736259</p>
             <p>📍 Address: Grüngürtelstr. 118, 50996, Köln, Germany</p>
           </div>
