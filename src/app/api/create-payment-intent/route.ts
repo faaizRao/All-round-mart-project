@@ -2,22 +2,35 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-10-29.clover',
-});
-
-// Create nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// Force dynamic rendering - prevents build-time execution
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
+    // Check for required environment variables
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error('STRIPE_SECRET_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Payment service not configured' },
+        { status: 500 }
+      );
+    }
+
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error('Email configuration is missing');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
     const { items, customer, total } = await request.json();
+
+    // Initialize Stripe with environment variable
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-10-29.clover',
+    });
 
     // Create payment intent
     const paymentIntent = await stripe.paymentIntents.create({
@@ -31,6 +44,15 @@ export async function POST(request: NextRequest) {
           quantity: item.quantity,
           price: item.product.price
         })))
+      },
+    });
+
+    // Create nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
